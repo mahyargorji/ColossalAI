@@ -30,6 +30,7 @@ class ShardConfig:
         gradient_checkpoint_config (Optional[GradientCheckpointConfig]): The gradient checkpoint config. Defaults to None.
         enable_all_optimization (bool): Whether to turn on all optimization tools including 'fused normalization', 'flash attention', 'JIT fused operators', 'sequence parallelism' and 'sequence overlap'. Defaults to False.
     """
+
     tensor_parallel_process_group: Optional[ProcessGroup] = None
     sequence_parallel_process_group: Optional[ProcessGroup] = None
     pipeline_stage_manager: Optional[PipelineStageManager] = None

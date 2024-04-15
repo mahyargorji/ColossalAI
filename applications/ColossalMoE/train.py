@@ -195,9 +195,9 @@ def main():
     lr_scheduler = CosineAnnealingWarmupLR(
         optimizer=optimizer,
         total_steps=args.num_epochs * len(dataloader),
-        warmup_steps=args.warmup_steps
-        if args.warmup_steps is not None
-        else int(args.num_epochs * len(dataloader) * 0.025),
+        warmup_steps=(
+            args.warmup_steps if args.warmup_steps is not None else int(args.num_epochs * len(dataloader) * 0.025)
+        ),
         eta_min=0.1 * args.lr,
     )
 

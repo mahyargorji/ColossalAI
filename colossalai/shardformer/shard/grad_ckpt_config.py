@@ -22,6 +22,7 @@ class PipelineGradientCheckpointConfig(GradientCheckpointConfig):
         2. Customize # ckpt layers assigned to each stage. This takes precedence over `gradient_checkpointing_ratio`.
 
     """
+
     """
     Args:
         gradient_checkpointing_ratio (Optional[float]): The ratio of gradient checkpointing. It can only be used in pipeline parallelism. Defaults to None.
